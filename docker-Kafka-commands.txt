@@ -1,0 +1,10 @@
+docker exec -t kafka-server \
+  kafka-console-consumer.sh \
+    --bootstrap-server localhost:9092 \
+    --topic t1
+
+docker exec -it robko_kafka_1 \
+  kafka-console-producer.sh \
+    --broker-list localhost:9092 \
+    --topic t1
+
