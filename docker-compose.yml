@@ -9,6 +9,8 @@ services:
     restart: always 
     networks:
       - python-kafka-net
+    environment:
+      - POSTGRES_PASSWORD=""
     volumes:
       # environments defined in main.py
       - pg_data:/var/lib/postgresql/data  
