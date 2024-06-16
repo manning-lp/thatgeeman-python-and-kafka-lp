@@ -10,9 +10,9 @@ services:
     networks:
       - python-kafka-net
     environment:
+      # needed although not set
       - POSTGRES_PASSWORD=""
-    volumes:
-      # environments defined in main.py
+    volumes: 
       - pg_data:/var/lib/postgresql/data  
     ports:
       - "5342:5342"
