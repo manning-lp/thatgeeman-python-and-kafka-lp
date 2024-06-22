@@ -1,8 +1,8 @@
 networks:
   python-kafka-net:
     driver: bridge
-
-services:
+  
+services: 
   db:
     # based on https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/
     image: postgres:12.19
@@ -42,7 +42,7 @@ services:
       - ALLOW_PLAINTEXT_LISTENER=yes
       - KAFKA_OTHER_CONFIG=later 
     depends_on:
-      - zookeeper
+      - zookeeper 
 
 volumes:
   zookeeper_data:
